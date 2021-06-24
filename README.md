@@ -1,5 +1,6 @@
 # youtube video & audio downloader bot ❤
 
+<img align="left" src="https://github.com/RazorKenway/RazorKenway/raw/main/Developer.gif" style="max-width:100%;">
 
 > This bot can download video or audio from youtube quickly (custom thumbnail support) Can be found in telegram as [@slbotzone](https://t.me/slbotzone)
 
