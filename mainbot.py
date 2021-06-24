@@ -27,21 +27,25 @@ s2tw = OpenCC('s2tw.json').convert
 async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
-               chat_id=message.chat.id,
-               text="""<b>Hey There, I'm AnyDL Bot
+               chat_id=message.chat.id, 
+               sticker("CAACAgIAAxkBAAEJpapg0_2HeGW3t93F6d1IbW7HftgqEAAC8wcAAhhC7gj21R3ZVhUQAx4E")
+               text="""<b> english - Hey There, I'm AnyDL Bot
 
-I can download video or audio from Youtube. Made by @supunma 🇱🇰
+I can download video or audio from Youtube. Made by @supunma 🇱🇰👨‍💻 
 
-Hit help button to find out more about how to use me</b>""",   
+Hit help button to find out more about how to use me 👨‍💻 
+
+සිංහල -  මට පුලුවන් ඔනෙම යු ටියුබ්  එකක් සහා  එකක් ඩව්න්ලොඩ් කරන්න 
+පහල චැනල් එකත් එක්ක එකතු වෙන්න මෙවැනි ඔනෙම බොට් කෙනෙක් හදන විදිය සරලව ඉගෙන ගන්න  </b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Help", callback_data="help"),
+                                            "🌟 Help 🌟 ", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/slbotzone")
+                                            "🗣 Channel 🗣 ", url="https://t.me/slbotzone")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/AnyDL-Bot")
+                                            "😇 create your own bot 😇 ", url="https://www.youtube.com/channel/UCvYfJcTr8RY72dIapzMqFQA?sub_confirmation=1")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -60,12 +64,12 @@ Just send a Youtube url to download it in video or audio format!
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back", callback_data="start"),
+                                            "🌝 Back 🌝", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "About", callback_data="about"),
+                                            "📜 About 📜 ", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/AnyDL-Bot")
+                                            "📦 Source Code 📦 ", url="https://github.com/youtubeslgeekshow/youtube-video-audio-downloader")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -76,21 +80,21 @@ async def about(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>About AnyDL Bot!</b>
+               text="""<b>About Bot📜 !</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/supunma">supun 🇱🇰</a>
+<b>🔥 Developer:</b> <a href="https://t.me/supunma">supun 🇱🇰</a>
 
-<b>♞ Support:</b> <a href="https://t.me/slbotzone">slbotzone</a>
+<b>🔥 Support:</b> <a href="https://t.me/slbotzone">slbotzone</a>
 
-<b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
+<b>🔥 video tutorial :</b> <a href="https://www.youtube.com/channel/UCvYfJcTr8RY72dIapzMqFQA">video</a>
 
 <b>~ @slbotzone bot's</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back", callback_data="help"),
+                                            " 🌝 Back 🌝 ", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/supunmadurangasl/AnyDL-Bot")
+                                            "📦 Source Code 📦", url="https://github.com/youtubeslgeekshow/youtube-video-audio-downloader")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -105,16 +109,16 @@ async def about(client, message):
                    & filters.regex(YTDL_REGEX))
 async def ytdl_with_button(_, message: Message):
     await message.reply_text(
-        "**Choose download type👇**",
+        "**Choose download type👇 ඔබගෙ අවශ්‍යතාවය තොරන්න  **",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Audio 🎵",
+                        "🎵 Audio  ශබ්දය 🎵  ",
                         callback_data="ytdl_audio"
                     ),
                     InlineKeyboardButton(
-                        "Video 🎬",
+                        "🎬 Video විඩියොව  🎬",
                         callback_data="ytdl_video"
                     )
                 ]
