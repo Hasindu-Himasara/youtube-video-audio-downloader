@@ -1,4 +1,5 @@
-# AnyDL Bot ❤
+# youtube video & audio downloader bot ❤
+
 
 > This bot can download video or audio from youtube quickly (custom thumbnail support) Can be found in telegram as [@slbotzone](https://t.me/slbotzone)
 
