@@ -12,7 +12,7 @@
 
 - [Dashezup](https://github.com/dashezup) 'Author of base repo'
 
-- [slbotzone BOTs](https://t.me/slbotzone)
+- [infinity bots ](https://t.me/infinity)
 
 - [Pyrogram Library](https://github.com/pyrogram/pyrogram)
 
