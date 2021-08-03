@@ -29,14 +29,13 @@ async def start(client, message):
        await Jebot.send_message(
                chat_id=message.chat.id, 
                sticker("CAACAgIAAxkBAAEJpapg0_2HeGW3t93F6d1IbW7HftgqEAAC8wcAAhhC7gj21R3ZVhUQAx4E")
-               text="""<b> english - Hey There, I'm AnyDL Bot
+               text="""<b> 
 
-I can download video or audio from Youtube. Made by @supunma 🇱🇰👨‍💻 
+Hello 👋
 
-Hit help button to find out more about how to use me 👨‍💻 
+You are Warmly welcome to  YT Downloader Bot 🇱🇰
 
-සිංහල -  මට පුලුවන් ඔනෙම යු ටියුබ්  එකක් සහා  එකක් ඩව්න්ලොඩ් කරන්න 
-පහල චැනල් එකත් එක්ක එකතු වෙන්න මෙවැනි ඔනෙම බොට් කෙනෙක් හදන විදිය සරලව ඉගෙන ගන්න  </b>""",   
+If you want to know how i works just touch on /help command 🙂 </b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -109,16 +108,16 @@ async def about(client, message):
                    & filters.regex(YTDL_REGEX))
 async def ytdl_with_button(_, message: Message):
     await message.reply_text(
-        "**Choose download type👇 ඔබගෙ අවශ්‍යතාවය තොරන්න  **",
+        "**Choose download type👇 **",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎵 Audio  ශබ්දය 🎵  ",
+                        "🎵 Audio🎵  ",
                         callback_data="ytdl_audio"
                     ),
                     InlineKeyboardButton(
-                        "🎬 Video විඩියොව  🎬",
+                        "🎬 Video🎬",
                         callback_data="ytdl_video"
                     )
                 ]
