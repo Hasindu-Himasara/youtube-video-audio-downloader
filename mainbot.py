@@ -7,6 +7,7 @@ from youtube_dl import YoutubeDL
 from opencc import OpenCC
 from config import Config
 import wget
+from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
 
 Jebot = Client(
    "YT Downloader",
@@ -22,13 +23,24 @@ YTDL_REGEX = (r"^((?:https?:)?\/\/)"
               r"(\/)([-a-zA-Z0-9()@:%_\+.~#?&//=]*)([\w\-]+)(\S+)?$")
 s2tw = OpenCC('s2tw.json').convert
 
+JOIN_ASAP = "<b>You Need To Join My updates channel  For Executing This Command 👮‍♀️...</b>"
 
-@Jebot.on_message(filters.command("start"))
-async def start(client, message):
-   if message.chat.type == 'private':
-       await Jebot.send_message(
-               chat_id=message.chat.id, 
-               sticker("CAACAgIAAxkBAAEJpapg0_2HeGW3t93F6d1IbW7HftgqEAAC8wcAAhhC7gj21R3ZVhUQAx4E")
+FSUBB = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton(text="🔔 Join My Channel", url=f"https://t.me/sl_bot_zone")
+        ]]
+    )
+@Jebot.on_message(command(["start", f"start"]) & other_filters)
+@errors
+async def start(_, message: Message):
+   if message.chat.type == 'private': 
+    try:
+        await message._client.get_chat_member(int("-1001325914694"), message.from_user.id)
+    except UserNotParticipant:
+        await message.reply_text(
+        text=JOIN_ASAP, disable_web_page_preview=True, reply_markup=FSUBB
+    )
+        return
                text="""<b> 
 
 Hello 👋
