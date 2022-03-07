@@ -41,13 +41,12 @@ async def start(_, message: Message):
         text=JOIN_ASAP, disable_web_page_preview=True, reply_markup=FSUBB
     )
         return
-               text="""<b> 
-
+               text="""
 Hello 👋
 
 You are Warmly welcome to  YT Downloader Bot 🇱🇰
 
-If you want to know how i works just touch on /help command 🙂 </b>""",   
+If you want to know how i works just touch on /help command 🙂 """,   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
